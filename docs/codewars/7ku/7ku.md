@@ -121,3 +121,19 @@ mapObj ={"A":"T","T":"A","C":"G","G":"C"}
 const DNAStrand = strDNA => strDNA.replace(/./g,item => mapObj[item])
 ```
 
+## 第九题、多位数字数字从大到小排序
+
+题目示例
+
+```js
+Input: 21445 Output: 54421
+Input: 145263 Output: 654321
+Input: 1254859723 Output: 9875543221
+```
+
+答案
+
+```js
+const descendingOrder = num => Number(num.toString().split('').sort((a,b)=>b-a).join(''))
+```
+
