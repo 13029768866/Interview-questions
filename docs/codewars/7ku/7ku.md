@@ -91,7 +91,7 @@ findShort("turns out random test cases are easier than writing out basic ones"),
 const findShort = str =>Math.min(...str.split(' ').map(item => item.length))
 ```
 
-## 第七题、
+## 第七题、数字的每个位数平方拼接？
 
 题目示例
 
@@ -103,5 +103,21 @@ squareDigits(9119), 811181
 
 ```js
 const squareDigits = num => Number(num.toString().split('').map(item => Math.pow(item,2)).join(''))
+```
+
+## 第八题、dna对位替换？
+
+题目示例
+
+```
+DNAStrand ("ATTGC") // return "TAACG"
+DNAStrand ("GTAT") // return "CATA" 
+```
+
+答案
+
+```js
+mapObj ={"A":"T","T":"A","C":"G","G":"C"}
+const DNAStrand = strDNA => strDNA.replace(/./g,item => mapObj[item])
 ```
 
