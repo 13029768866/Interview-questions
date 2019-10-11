@@ -13,10 +13,10 @@ const getCount = str => (str.match(/[aeiou]/ig) || []).length
 题目示例
 
 ```js
-Test.assertEquals(getMiddle("test"),"es");
-Test.assertEquals(getMiddle("testing"),"t");
-Test.assertEquals(getMiddle("middle"),"dd");
-Test.assertEquals(getMiddle("A"),"A");
+getMiddle("test"),"es"
+getMiddle("testing"),"t"
+getMiddle("middle"),"dd"
+getMiddle("A"),"A"
 ```
 
 答案
@@ -30,11 +30,11 @@ const getMiddle = (s) => s.substr(Math.ceil(s.length / 2 - 1),(s.length % 2)?1:2
 题目示例
 
 ```js
-	Test.assertEquals(accum("ZpglnRxqenU"), "Z-Pp-Ggg-Llll-Nnnnn-Rrrrrr-Xxxxxxx-Qqqqqqqq-Eeeeeeeee-Nnnnnnnnnn-Uuuuuuuuuuu");
-	Test.assertEquals(accum("NyffsGeyylB"), "N-Yy-Fff-Ffff-Sssss-Gggggg-Eeeeeee-Yyyyyyyy-Yyyyyyyyy-Llllllllll-Bbbbbbbbbbb");
-	Test.assertEquals(accum("MjtkuBovqrU"), "M-Jj-Ttt-Kkkk-Uuuuu-Bbbbbb-Ooooooo-Vvvvvvvv-Qqqqqqqqq-Rrrrrrrrrr-Uuuuuuuuuuu");
-	Test.assertEquals(accum("EvidjUnokmM"), "E-Vv-Iii-Dddd-Jjjjj-Uuuuuu-Nnnnnnn-Oooooooo-Kkkkkkkkk-Mmmmmmmmmm-Mmmmmmmmmmm");
-	Test.assertEquals(accum("HbideVbxncC"), "H-Bb-Iii-Dddd-Eeeee-Vvvvvv-Bbbbbbb-Xxxxxxxx-Nnnnnnnnn-Cccccccccc-Ccccccccccc");
+	accum("ZpglnRxqenU"), "Z-Pp-Ggg-Llll-Nnnnn-Rrrrrr-Xxxxxxx-Qqqqqqqq-Eeeeeeeee-Nnnnnnnnnn-Uuuuuuuuuuu";
+	accum("NyffsGeyylB"), "N-Yy-Fff-Ffff-Sssss-Gggggg-Eeeeeee-Yyyyyyyy-Yyyyyyyyy-Llllllllll-Bbbbbbbbbbb";
+	accum("MjtkuBovqrU"), "M-Jj-Ttt-Kkkk-Uuuuu-Bbbbbb-Ooooooo-Vvvvvvvv-Qqqqqqqqq-Rrrrrrrrrr-Uuuuuuuuuuu";
+	accum("EvidjUnokmM"), "E-Vv-Iii-Dddd-Jjjjj-Uuuuuu-Nnnnnnn-Oooooooo-Kkkkkkkkk-Mmmmmmmmmm-Mmmmmmmmmmm";
+	accum("HbideVbxncC"), "H-Bb-Iii-Dddd-Eeeee-Vvvvvv-Bbbbbbb-Xxxxxxxx-Nnnnnnnnn-Cccccccccc-Ccccccccccc";
 ```
 
 答案
@@ -75,5 +75,20 @@ Test.assertEquals(disemvowel("This website is for losers LOL!"),
 
 ```js
 const disemvowel = str => str.replace(/[aeiou]/ig,"")
+```
+
+## 第六题、获取字符串中长度最小的字符？
+
+题目示例
+
+```js
+findShort("bitcoin take over the world maybe who knows perhaps"), 3
+findShort("turns out random test cases are easier than writing out basic ones"), 3
+```
+
+答案
+
+```js
+const findShort = str =>Math.min(...str.split(' ').map(item => item.length))
 ```
 
