@@ -62,13 +62,12 @@ const highAndLow = str => {
 }
 ```
 
-## 第五题、删除字符串中原因字符？
+## 第五题、删除字符串中元音字符？
 
 题目示例
 
 ```js
-Test.assertEquals(disemvowel("This website is for losers LOL!"),
-  "Ths wbst s fr lsrs LL!")
+disemvowel("This website is for losers LOL!"),	"Ths wbst s fr lsrs LL!"
 ```
 
 答案
@@ -77,7 +76,7 @@ Test.assertEquals(disemvowel("This website is for losers LOL!"),
 const disemvowel = str => str.replace(/[aeiou]/ig,"")
 ```
 
-## 第六题、获取字符串中长度最小的字符？
+## 第六题、获取字符串中长度最小的字符的个数？
 
 题目示例
 
@@ -90,5 +89,19 @@ findShort("turns out random test cases are easier than writing out basic ones"),
 
 ```js
 const findShort = str =>Math.min(...str.split(' ').map(item => item.length))
+```
+
+## 第七题、
+
+题目示例
+
+```js
+squareDigits(9119), 811181
+```
+
+答案
+
+```js
+const squareDigits = num => Number(num.toString().split('').map(item => Math.pow(item,2)).join(''))
 ```
 
