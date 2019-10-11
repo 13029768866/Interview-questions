@@ -62,3 +62,18 @@ const highAndLow = str => {
 }
 ```
 
+## 第五题、删除字符串中原因字符？
+
+题目示例
+
+```js
+Test.assertEquals(disemvowel("This website is for losers LOL!"),
+  "Ths wbst s fr lsrs LL!")
+```
+
+答案
+
+```js
+const disemvowel = str => str.replace(/[aeiou]/ig,"")
+```
+
