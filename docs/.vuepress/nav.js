@@ -2,6 +2,9 @@ module.exports = [
     {
         text: '面试', link: '/interview/'
     },
+    {
+        text: 'Codewars', link: '/codewars/'
+    }
     // {
     //     text: '面试宝典', link: '/baodian/',
 	// 	items: [
