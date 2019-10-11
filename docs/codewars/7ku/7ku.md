@@ -137,3 +137,10 @@ Input: 1254859723 Output: 9875543221
 const descendingOrder = num => Number(num.toString().split('').sort((a,b)=>b-a).join(''))
 ```
 
+## 第十题、字符串的守字母大写
+
+```js
+String.prototype.toJadenCase = function () {
+ return this.toLowerCase().replace(/( |^)[a-z]/g,L => L.toUpperCase())
+};
+```
