@@ -139,6 +139,14 @@ const descendingOrder = num => Number(num.toString().split('').sort((a,b)=>b-a).
 
 ## 第十题、字符串的守字母大写
 
+题目示例
+
+```js
+ "How can mirrors be real if our eyes aren't real"  => "How Can Mirrors Be Real If Our Eyes Aren't Real"
+```
+
+答案 
+
 ```js
 String.prototype.toJadenCase = function () {
  return this.toLowerCase().replace(/( |^)[a-z]/g,L => L.toUpperCase())
