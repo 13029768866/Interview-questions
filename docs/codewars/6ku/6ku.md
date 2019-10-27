@@ -24,3 +24,25 @@ const likes = names => [
 ][Math.min(4,names.length)]
 ```
 
+## 第二题、奇数数组的偶数项，偶数数组的奇数项
+
+题目示例
+
+```js
+[2, 4, 0, 100, 4, 11, 2602, 36]
+Should return: 11 (the only odd number)
+
+[160, 3, 1719, 19, 11, 13, -21]
+Should return: 160 (the only even number)
+```
+
+答案
+
+```js
+const findOutlier = arr =>{
+  let oddArr = arr.filter(item => !(item % 2))
+  let eveArr = arr.filter(item => item % 2)
+  return oddArr.length === 1? oddArr[0] :eveArr[0]
+}
+```
+
