@@ -153,7 +153,24 @@ String.prototype.toJadenCase = function () {
 };
 ```
 
-## 第十一题、
+## 第十一题、任意两个整数之间所有整数的和
+
+题目示例
+
+```js
+GetSum(-1, 0) == -1 // -1 + 0 = -1
+GetSum(-1, 2) == 2  // -1 + 0 + 1 + 2 = 2
+```
+
+答案
+
+```js
+const GetSum = (a,b) => {
+  let max = Math.max(a,b)
+  let min = Math.min(a,b)
+  return (max + min) * (max - min + 1) / 2
+}
+```
 
 ## 第十二题、
 
