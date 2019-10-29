@@ -61,3 +61,25 @@ Test.assertEquals(countBits(1234), 5);
 let countBits = n => (n.toString(2).match(/[1]/g)|| []).length
 ```
 
+##  第四题、数字递归求乘积单位数次数
+
+题目示例
+
+```js
+ persistence(39) === 3 	// because 3*9 = 27, 2*7 = 14, 1*4=4
+                       	// and 4 has only one digit
+ persistence(999) === 4 // because 9*9*9 = 729, 7*2*9 = 126,
+                        // 1*2*6 = 12, and finally 1*2 = 2
+ persistence(4) === 0 	// because 4 is already a one-digit number
+```
+
+答案（计数器）
+
+```js
+const persistence = num => {
+  return `${num}`.length > 1?
+        1 + persistence(`${num}`.split('').reduce((a,b) => a * b))
+        : 0
+}
+```
+
