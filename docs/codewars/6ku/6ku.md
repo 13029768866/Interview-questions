@@ -83,3 +83,17 @@ const persistence = num => {
 }
 ```
 
+## 第五题、数组按规则转化成电话字符串
+
+题目示例
+
+```js
+createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) // => returns "(123) 456-7890"
+```
+
+答案
+
+```js
+const createPhoneNumber = num => num.join('').replace(/(\d{3})(\d{3})(\d{4})/,'($1) $2-$3')
+```
+
