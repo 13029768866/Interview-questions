@@ -46,3 +46,18 @@ const findOutlier = arr =>{
 }
 ```
 
+## 第三题、获取一个正整数2进制值中'1'的个数
+
+题目示例
+
+```js
+The binary representation of 1234 is 10011010010, so the function should return 5 in this case
+Test.assertEquals(countBits(1234), 5);
+```
+
+答案
+
+```js
+let countBits = n => (n.toString(2).match(/[1]/g)|| []).length
+```
+
