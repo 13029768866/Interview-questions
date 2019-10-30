@@ -188,3 +188,20 @@ filter_list([1,2,'aasf','1','123',123]) == [1,2,123]
 const filter_list = l => l.filter(item => Number.isInteger(item))
 ```
 
+## 第十三题、数组中最小2个数求和
+
+题目示例
+
+```js
+For example, when an array is passed like [19, 5, 42, 2, 77], the output should be 7.
+```
+
+答案
+
+```js
+const sumTwoSmallestNumbers = (arr) => {
+  let [a,b] = arr.sort((a,b)=> a - b)
+  return a+b
+}
+```
+
