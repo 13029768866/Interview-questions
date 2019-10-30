@@ -221,7 +221,7 @@ isIsogram("moOse") == false // -- ignore letter case
 let isIsogram = str => [...new Set(str.toLowerCase())].length == str.length
 ```
 
-优秀的正则答案
+优秀答案
 
 ```js
 let isIsogram = str => !/(\w).*\1/i.test(str)
