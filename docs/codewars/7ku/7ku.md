@@ -137,7 +137,7 @@ Input: 1254859723 Output: 9875543221
 const descendingOrder = num => Number(num.toString().split('').sort((a,b)=>b-a).join(''))
 ```
 
-## 第十题、字符串的守字母大写
+## 第十题、字符串的首字母大写
 
 题目示例
 
@@ -225,5 +225,20 @@ let isIsogram = str => [...new Set(str.toLowerCase())].length == str.length
 
 ```js
 let isIsogram = str => !/(\w).*\1/i.test(str)
+```
+
+## 第十五题、Is this a triangle?（三角形?）
+
+题目示例
+
+```js
+Test.assertEquals(isTriangle(1,2,2), true);
+Test.assertEquals(isTriangle(7,2,2), false);
+```
+
+答案
+
+```js
+const isTriangle = (a,b,c)  => (a+b>c && b+c>a && a+c>b)?true:false;
 ```
 
