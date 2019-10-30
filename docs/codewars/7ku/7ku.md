@@ -205,3 +205,25 @@ const sumTwoSmallestNumbers = (arr) => {
 }
 ```
 
+## 第十四题、字符串是否有相同字符判断（大小写也算相同）
+
+题目示例
+
+```js
+isIsogram("Dermatoglyphics") == true
+isIsogram("aba") == false
+isIsogram("moOse") == false // -- ignore letter case
+```
+
+个人答案
+
+```js
+let isIsogram = str => [...new Set(str.toLowerCase())].length == str.length
+```
+
+优秀的正则答案
+
+```js
+let isIsogram = str => !/(\w).*\1/i.test(str)
+```
+
