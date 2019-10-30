@@ -172,18 +172,19 @@ const GetSum = (a,b) => {
 }
 ```
 
-## 第十二题、获取一个正整数2进制值中'1'的个数
+## 第十二题、数组中整数筛选
 
 题目示例
 
 ```js
-The binary representation of 1234 is 10011010010, so the function should return 5 in this case
-Test.assertEquals(countBits(1234), 5);
+filter_list([1,2,'a','b']) == [1,2]
+filter_list([1,'a','b',0,15]) == [1,0,15]
+filter_list([1,2,'aasf','1','123',123]) == [1,2,123]
 ```
 
 答案
 
 ```js
-let countBits = n => (n.toString(2).match(/[1]/g)|| []).length
+const filter_list = l => l.filter(item => Number.isInteger(item))
 ```
 
