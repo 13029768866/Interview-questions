@@ -97,3 +97,53 @@ createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) // => returns "(123) 456-7890"
 const createPhoneNumber = num => num.join('').replace(/(\d{3})(\d{3})(\d{4})/,'($1) $2-$3')
 ```
 
+## 第六题、Counting Duplicates（重复计算）
+
+题目示例
+
+```js
+"abcde" -> 0 # no characters repeats more than once
+"aabbcde" -> 2 # 'a' and 'b'
+"aabBcde" -> 2 # 'a' occurs twice and 'b' twice (`b` and `B`)
+"indivisibility" -> 1 # 'i' occurs six times
+"Indivisibilities" -> 2 # 'i' occurs seven times and 's' occurs twice
+"aA11" -> 2 # 'a' and '1'
+"ABBA" -> 2 # 'A' and 'B' each occur twice
+```
+
+个人答案
+
+```js
+const duplicateCount = text => {
+ let arr = []
+ text = text.toLowerCase().split('')
+ text.map(item => {
+   !(text.indexOf(item) == text.lastIndexOf(item))?
+     arr.push(item):
+     '';   
+ })
+ return [...new Set(arr)].length
+}
+```
+
+优秀答案
+
+```js
+let duplicateCount = text => (text.toLowerCase().split('').sort().join('').match(/([^])\1+/g) || []).length
+```
+
+## 第七题、Array.diff（获取两个数组不同项）
+
+题目示例
+
+```js
+array_diff([1,2],[1]) == [2]
+array_diff([1,2,2,2,3],[2]) == [1,3]
+```
+
+答案
+
+```js
+const array_diff = (a,b) => a.filter(item => !(b.includes(item)))
+```
+
