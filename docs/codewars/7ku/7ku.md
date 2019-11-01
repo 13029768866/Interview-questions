@@ -242,3 +242,21 @@ Test.assertEquals(isTriangle(7,2,2), false);
 const isTriangle = (a,b,c)  => (a+b>c && b+c>a && a+c>b)?true:false;
 ```
 
+## 第十六题、Find the next perfect square!（寻找下一个完美的正方形）
+
+题目示例
+
+```js
+findNextSquare(121) --> returns 144
+findNextSquare(625) --> returns 676
+findNextSquare(114) --> returns -1 since 114 is not a perfect
+```
+
+答案
+
+```js
+const findNextSquare = sq => Number.isInteger(Math.sqrt(sq))?
+ Math.pow(Math.sqrt(sq)+1,2):
+ -1;
+```
+
