@@ -168,3 +168,40 @@ uniqueInOrder([1,2,2,3,3])       == [1,2,3]
 const uniqueInOrder = it => [...it].filter((item,idx) => item != it[idx - 1])
 ```
 
+## 第九题、Your order, please（根据字符串中数字顺序重排字符串）
+
+题目示例
+
+```js
+"is2 Thi1s T4est 3a"  -->  "Thi1s is2 3a T4est"
+"4of Fo1r pe6ople g3ood th5e the2"  -->  "Fo1r the2 g3ood 4of th5e pe6ople"
+""  -->  ""
+```
+
+思路
+
+1. 根据空格拆分成数组
+2. 循环数组根据数字大小重新排序
+
+答案（个人）
+
+```js
+const order = words => {
+  let arr = [];
+   for(let i = 1; i <=  words.length;i++){
+     words.split(' ').map((item,idx) => {
+       item.includes(i)?arr.push(item): '';
+     })
+   }
+  return arr.join(' ')
+}
+```
+
+答案（优秀）
+
+```js
+const order = words => words.split(' ').sort((a,b) => a.match(/\d/) - b.match(/\d/)).join(' ')
+
+通过正则比较数据中的数字
+```
+
