@@ -260,3 +260,28 @@ const findNextSquare = sq => Number.isInteger(Math.sqrt(sq))?
  -1;
 ```
 
+## 第十七题、Two to One（字符串拼接排序去重）
+
+题目示例
+
+```js
+a = "xyaabbbccccdefww"
+b = "xxxxyyyyabklmopq"
+longest(a, b) -> "abcdefklmopqwxy"
+
+a = "abcdefghijklmnopqrstuvwxyz"
+longest(a, a) -> "abcdefghijklmnopqrstuvwxyz"
+```
+
+思路
+
+1. 字符串拼接去重
+2. 转化成数组排序
+3. 再转化成字符串
+
+答案
+
+```js
+const longest = (a,b) => [...new Set(a+b)].sort().join('')
+```
+
