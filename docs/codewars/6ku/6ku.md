@@ -147,3 +147,24 @@ array_diff([1,2,2,2,3],[2]) == [1,3]
 const array_diff = (a,b) => a.filter(item => !(b.includes(item)))
 ```
 
+## 第八题、Unique In Order(独特排序)
+
+题目示例
+
+```js
+uniqueInOrder('AAAABBBCCDAABBB') == ['A', 'B', 'C', 'D', 'A', 'B']
+uniqueInOrder('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D']
+uniqueInOrder([1,2,2,3,3])       == [1,2,3]
+```
+
+思路
+
+1. 传参数据类型不同，解构赋值同意处理成数组
+2. 通过过滤筛选出相邻的不同项
+
+答案
+
+```js
+const uniqueInOrder = it => [...it].filter((item,idx) => item != it[idx - 1])
+```
+
