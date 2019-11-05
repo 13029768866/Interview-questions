@@ -285,3 +285,25 @@ longest(a, a) -> "abcdefghijklmnopqrstuvwxyz"
 const longest = (a,b) => [...new Set(a+b)].sort().join('')
 ```
 
+## 第十八题、Printer Errors(获取字符串中[n-z]的个数)
+
+题目示例
+
+```js
+s="aaabbbbhaijjjm"
+error_printer(s) => "0/14"
+
+s="aaaxbbbbyyhwawiwjjjwwm"
+error_printer(s) => "8/22"
+```
+
+思路
+
+1. 正则筛选出非【a-m】的个数
+
+答案
+
+```js
+const printerError = s => `${(s.match(/[^a-m]/g) || []).length}/${s.length}`
+```
+
