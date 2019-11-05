@@ -307,3 +307,24 @@ error_printer(s) => "8/22"
 const printerError = s => `${(s.match(/[^a-m]/g) || []).length}/${s.length}`
 ```
 
+## 第十九题、Credit Card Mask（字符串加密）
+
+题目示例
+
+```js
+maskify("4556364607935616") == "############5616"
+maskify(     "64607935616") ==      "#######5616"
+maskify(               "1") ==                "1"
+maskify(                "") ==                 ""
+```
+
+思路
+
+1. 字符串截取拼接
+
+答案
+
+```js
+const maskify = cc => `${cc.slice(0,-4).replace(/\w/g,"#")}${cc.slice(-4)}`
+```
+
