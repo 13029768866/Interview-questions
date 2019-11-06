@@ -205,3 +205,26 @@ const order = words => words.split(' ').sort((a,b) => a.match(/\d/) - b.match(/\
 通过正则比较数据中的数字
 ```
 
+## Replace With Alphabet Position（字符串转换成字母表位置的数组）
+
+题目示例
+
+```js
+Test.assertEquals(alphabetPosition("The sunset sets at twelve o' clock."), "20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11");
+Test.assertEquals(alphabetPosition("The narwhal bacons at midnight."), "20 8 5 14 1 18 23 8 1 12 2 1 3 15 14 19 1 20 13 9 4 14 9 7 8 20");
+```
+
+思路
+
+1. 统一字符大小写
+2. 去除非字母的符号
+3. 通过空格转换成数组
+4. 遍历通过charCodeAt获取字母位数
+5. 在通过空格转化成字符串
+
+答案
+
+```js
+const alphabetPosition = text => text.toUpperCase().replace(/[^A-Z]/g,'').split('').map(item => item.charCodeAt() - 64).join(' ')
+```
+
