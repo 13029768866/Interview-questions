@@ -330,3 +330,17 @@ const maskify = cc => `${cc.slice(0,-4).replace(/\w/g,"#")}${cc.slice(-4)}`
 
 ## 第二十题、Regex validate PIN code（验证字符串是否是4或6位数字构成）
 
+题目示例
+
+```js
+validatePIN("1234") === true
+validatePIN("12345") === false
+validatePIN("a234") === false
+```
+
+答案
+
+```js
+const validatePIN = str =>/^(\d{4}|\d{6})$/.test(str)
+```
+

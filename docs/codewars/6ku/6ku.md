@@ -205,7 +205,7 @@ const order = words => words.split(' ').sort((a,b) => a.match(/\d/) - b.match(/\
 通过正则比较数据中的数字
 ```
 
-## Replace With Alphabet Position（字符串转换成字母表位置的数组）
+## 第十题、Replace With Alphabet Position（字符串转换成字母表位置的数组）
 
 题目示例
 
