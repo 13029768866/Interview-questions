@@ -228,3 +228,25 @@ Test.assertEquals(alphabetPosition("The narwhal bacons at midnight."), "20 8 5 1
 const alphabetPosition = text => text.toUpperCase().replace(/[^A-Z]/g,'').split('').map(item => item.charCodeAt() - 64).join(' ')
 ```
 
+# 第十一题、IQ Test（获取字符串中不同项的位置）
+
+题目示例
+
+```js
+iqTest("2 4 7 8 10") => 3 // Third number is odd, while the rest of the numbers are even
+
+iqTest("1 2 1 1") => 2 // Second number is even, while the rest of the numbers are odd
+```
+
+答案
+
+```js
+const iqTest = str => {
+  let arr = str.split(' '),
+      oddArr =  arr.filter(item => item % 2),
+      evenArr = arr.filter(item => !(item % 2)),
+      idx = oddArr.length === 1?arr.indexOf(oddArr[0]):arr.indexOf(evenArr[0])
+  return idx + 1
+}
+```
+
