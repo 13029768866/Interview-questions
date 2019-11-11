@@ -4,7 +4,10 @@ module.exports = [
     },
     {
         text: 'Codewars', link: '/codewars/'
-    }
+    },
+		{
+		    text: 'LeetCode', link: '/leetcode/'
+		}
     // {
     //     text: '面试宝典', link: '/baodian/',
 	// 	items: [
