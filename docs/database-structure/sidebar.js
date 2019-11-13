@@ -1,9 +1,9 @@
 module.exports = [
     {
-        title:'LeetCode',
+        title:'算法',
         collapsable: true,
         children:[
-        '/leetcode/index-order/idx-order',
+        '/database-structure/structure-algorithms/algorithms',
         ]
     }    
 ]

@@ -6,7 +6,7 @@ module.exports = [
         text: 'Codewars', link: '/codewars/'
     },
 		{
-		    text: 'LeetCode', link: '/leetcode/'
+		    text: '算法', link: '/database-structure/'
 		}
     // {
     //     text: '面试宝典', link: '/baodian/',
