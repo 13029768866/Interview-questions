@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">			
+			let obj = {
+			    2: 3,
+			    3: 4,
+			    length: 2,
+			    push: Array.prototype.push
+			}
+			obj.push(1);
+			obj.push(2);
+			console.log(obj);
+			
+			/* 
+				数组push方法的原理探究
+				arr[arr.length]代表数组的下一项
+				arr[arr.length]添加完毕数组长度自增1
+				obj.push(1) => obj[obj.length] => obj[2] = 1, length++,length = 3
+				obj.push(2) => obj[obj.length] => obj[3] = 2, length++,length = 4
+			 */
+		</script>
+	</body>
+</html>
