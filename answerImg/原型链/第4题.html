@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			
+			/* 
+				1、二连等是把等号两边转化成数字再进行比较
+				2、复杂数据类型会先调用原型上的toString方法，再执行Number强制转换
+			 */
+			/* 方案一 */
+			/* var a = {
+				i: 0,
+				toString(){
+					return ++ this.i
+				}
+			}
+			if (a == 1 && a == 2 && a == 3) {
+			    console.log('OK');
+			} */
+			
+			/* 
+				方案二
+			 */
+			var i = 0;
+			Object.defineProperty(window,'a',{
+				get(){
+					return ++i
+				}
+			})
+			
+			if (a == 1 && a == 2 && a == 3) {
+			    console.log('OK');
+			}
+		</script>
+	</body>
+</html>
